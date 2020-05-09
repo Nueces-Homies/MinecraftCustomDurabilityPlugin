@@ -1,0 +1,5 @@
+main: com.zuhairparvez.customdurability.Main
+name: CustomDurability
+version: 1.0.0
+author: Zuhair Parvez
+api-version: 1.14
