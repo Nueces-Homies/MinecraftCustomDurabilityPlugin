@@ -9,10 +9,14 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
+        CustomDurabilityManager durabilityManager = new CustomDurabilityManager(this);
 
         PluginManager pm = this.getServer().getPluginManager();
-        pm.registerEvents(new CraftingListener(this), this);
+        pm.registerEvents(new CraftingListener(durabilityManager), this);
+
         this.getServer().getPluginManager().registerEvents(this, this);
+
+        this.getCommand("durability").setExecutor(new DurabilityCommand(durabilityManager));
     }
 
     @Override

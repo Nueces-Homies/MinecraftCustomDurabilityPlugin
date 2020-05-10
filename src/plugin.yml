@@ -3,3 +3,8 @@ name: CustomDurability
 version: 1.0.0
 author: Zuhair Parvez
 api-version: 1.14
+
+commands:
+    durability:
+        description: Command to show actual and custom damages of the item in primary hand
+        usage: /durability [playerName]
